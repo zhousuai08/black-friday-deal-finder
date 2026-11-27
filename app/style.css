@@ -1,0 +1,287 @@
+/* Bargain Board — Black Friday 2026. Dark green header, warm amber accent,
+   clean white cards. One file, no framework, no web fonts. */
+
+:root {
+  --ink: #1c2420;
+  --muted: #5c6b64;
+  --line: #e3e8e4;
+  --card: #ffffff;
+  --bg: #f4f6f3;
+  --green: #0b3d2e;
+  --green-soft: #e7f0ea;
+  --amber: #e8a100;
+  --amber-soft: #fdf3d7;
+  --red: #b3261e;
+  --red-soft: #fdeceb;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px 40px; }
+
+a { color: #0b5d3b; }
+
+.site-header {
+  background: var(--green);
+  color: #fff;
+  padding: 22px 0 18px;
+  margin-bottom: 20px;
+}
+
+.site-header .wrap { padding-bottom: 0; }
+
+.brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.tagline { margin: 2px 0 0; color: #cfe3d6; font-size: 15px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0 0 18px;
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.stat b { display: block; font-size: 24px; line-height: 1.2; }
+.stat span { color: var(--muted); font-size: 13px; }
+
+.controls {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  flex: 1 1 140px;
+}
+
+.controls input[type="search"],
+.controls select {
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 10px;
+  border: 1px solid #c9d2cc;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  min-width: 0;
+  width: 100%;
+}
+
+.controls .search { flex: 2 1 220px; }
+
+.count { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+.count b { color: var(--ink); }
+
+.deals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.deal {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deal h3 { margin: 0; font-size: 17px; line-height: 1.35; }
+.deal h3 a { color: var(--ink); text-decoration: none; }
+.deal h3 a:hover { text-decoration: underline; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.chip {
+  background: var(--green-soft);
+  color: #14532d;
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-weight: 600;
+}
+
+.chip.store { background: #eef2f7; color: #334155; }
+
+.price-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+
+.price { font-size: 26px; font-weight: 800; }
+.was { color: var(--muted); text-decoration: line-through; font-size: 15px; }
+
+.off {
+  background: var(--red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.save { color: var(--muted); font-size: 14px; }
+
+.verdict {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.verdict.all-time-low { background: #7c2d12; color: #fff; }
+.verdict.strong { background: var(--amber-soft); color: #7c4a03; border: 1px solid #f0d48a; }
+.verdict.good { background: var(--green-soft); color: #14532d; }
+.verdict.routine { background: #eef2f7; color: #475569; }
+
+.note { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+
+.checked { color: var(--muted); font-size: 12px; }
+
+.buy {
+  display: inline-block;
+  text-align: center;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 4px;
+}
+
+.buy:hover { background: #0e4d3a; }
+
+.empty {
+  background: var(--card);
+  border: 1px dashed #c9d2cc;
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  grid-column: 1 / -1;
+}
+
+
+/* ---- Deal detail page ---- */
+
+.back { display: inline-block; margin: 4px 0 14px; font-weight: 600; }
+
+.detail {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.detail h1 { margin: 0 0 10px; font-size: 26px; line-height: 1.3; }
+
+.detail .price-row { margin: 6px 0 4px; }
+.detail .price { font-size: 34px; }
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 18px;
+  margin: 16px 0;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0; }
+
+.compare {
+  margin: 18px 0 0;
+  padding: 14px;
+  background: var(--amber-soft);
+  border: 1px solid #f0d48a;
+  border-radius: 8px;
+}
+
+.compare h2 { margin: 0 0 8px; font-size: 16px; }
+.compare table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.compare th, .compare td { text-align: left; padding: 6px 8px 6px 0; }
+.compare th { color: var(--muted); font-size: 13px; }
+.compare tr + tr td { border-top: 1px solid #ead9a0; }
+.compare .best { font-weight: 800; color: var(--red); }
+
+/* ---- About page ---- */
+
+.about {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.about h1 { margin-top: 0; }
+.about li { margin-bottom: 6px; }
+
+/* ---- Footer ---- */
+
+footer {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+/* ---- Phone layout ---- */
+
+@media (max-width: 860px) {
+  .deals { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .deals { grid-template-columns: 1fr; }
+  .brand { font-size: 25px; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .controls .search, .controls select { flex: 1 1 auto; width: 100%; }
+  .detail h1 { font-size: 22px; }
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 8px; }
+}
