@@ -31,3 +31,4 @@ store, on November 27, 2026 (06:30 UTC). A deal only made the board if its
 price could be verified that day. Where Best Buy shows a “comparable value”
 instead of a past price, the deal's note says so. The research log, with the
 source for every deal, is kept outside this repository.
+Revised after upload: the build output was re-verified byte-identical.

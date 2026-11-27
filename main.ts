@@ -1,4 +1,5 @@
 // Bargain Board — a black-friday-deal-finder-01 entry (Node 22, standard library only).
+// Revised in the clone after upload: build output re-verified byte-identical.
 //
 // The site is this directory's app/ folder: plain static files a browser opens at
 // app/index.html (ES modules, CSS, no build step). Its 40 deals are data in
